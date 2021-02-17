@@ -17,27 +17,39 @@ The following steps are used to determine the next generation:
 ### Selection
 The selection of the fittest and second fittest is done via a fitness function that determines a fitness score for
 a given individual. In this case it the number of 1s in the chromosome.
+
 **Example:**
+
+```
 Individual(01010) has a fitness score of 2
+```
 
 ### Crossover
 Given the fittest and second fittest out of a population, one determines a random crossover point.
-If n is the number of genes per individual, we want to have a crossover point p with 0 <= p <=n.
+If n is the number of genes per individual, we want to have a crossover point p with `0 <= p <=n`.
 Starting from beginning of the gene sequence until the crossover point, the genes of the fittest and
 second fittest are switched to generate offspring.
+
 **Example:**
+
 _Given a crossover point of 2:_
+```
 Individual(01010)
 Individual(11010)
------------------
+----------------
 Individual(11010) - the offspring 
+```
 
 ### Mutation
 After there is an offspring, there is a small probability that mutation occurs. Mutation means that some
 genes are switched (taken by random).
+
 **Example:**
+
+```
 Individual(10101) - Before Mutation
 Individual(11101) - After Mutation
+```
 
 ## Building and running
 ```bash
